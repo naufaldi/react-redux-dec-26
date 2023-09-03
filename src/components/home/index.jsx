@@ -15,7 +15,7 @@ const Home = ({count, setCount}) => {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-       <Button count={count} setCount={setCount}>
+       <Button count={count} setCount={setCount} color={'white'}>
        count is
        </Button>
         <p>
