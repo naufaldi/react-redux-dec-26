@@ -1,21 +1,18 @@
-import { useState } from 'react'
+import { useState } from 'react';
 
-import './App.css'
-import Home from './components/home'
-import About from './components/about'
+import './App.css';
+import Home from './components/home/componentsTwo';
+import About from './components/about/main';
+import Router from './Route';
 
 function App() {
   // ini useState, local state
-  const [count, setCount] = useState(0);
-  const [isDisable, setDisable] = useState(true);
-  const [color, setColor] = useState('red');
 
   return (
     <>
-      <Home count={count} setCount={setCount}/>
-      <About/>
+      <Router />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
