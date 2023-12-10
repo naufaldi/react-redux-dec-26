@@ -1,8 +1,13 @@
+import { useDispatch } from 'react-redux';
 import reactLogo from '../../assets/react.svg';
+import { increment } from '../../reducer/counterSlice';
 import ComponentsThree from './ComponentsThree';
 
 import viteLogo from '/vite.svg';
+import { useState } from 'react';
 const ComponentsTwo = ({ count, setCount }) => {
+  const dispath = useDispatch();
+  const [isGreen, setIsGreen] = useState(false);
   return (
     <>
       <div>
@@ -19,6 +24,8 @@ const ComponentsTwo = ({ count, setCount }) => {
       </div>
       <h1>Vite + React</h1>
       <ComponentsThree count={count} setCount={setCount} />
+      <button onClick={() => setIsGreen(!isGreen)}> Change Green </button>
+      <button onClick={() => dispath(increment())}>Increment</button>
     </>
   );
 };
